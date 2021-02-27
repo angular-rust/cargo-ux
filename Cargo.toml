@@ -2,7 +2,18 @@
 name = "cargo-ux"
 version = "0.1.0"
 authors = ["Victor Dudochkin <dudochkin.victor@gmail.com>"]
+readme = "README.md"
+homepage = "https://angular-rust.github.io/cargo-ux"
+repository = "https://github.com/angular-rust/cargo-ux"
+documentation = "https://docs.rs/cargo-ux"
+description = "Cargo plugin to help develop UX framework applications"
+# keywords = ["gamedev", "graphics"]
+categories = ["command-line-utilities", "development-tools::cargo-plugins"]
 edition = "2018"
+license = "GPL-3.0"
+
+[badges]
+maintenance = { status = "actively-developed" }
 
 [features]
 web = ["wasm-bindgen", "wasm-bindgen-futures", "wasm-logger", "gloo", "js-sys", "wasm-bindgen-test"]
