@@ -1,20 +1,20 @@
 # Cargo UX Plugin
 
-<!-- [![API Docs][docrs-badge]][docrs-url] -->
+[![API Docs][docrs-badge]][docrs-url]
 [![Crates.io][crates-badge]][crates-url]
 [![GPL-3.0 licensed][license-badge]][license-url]
 [![Gitter chat][gitter-badge]][gitter-url]
 [![Rustc Version 1.45+][rust-badge]][rust-url]
  
-[docrs-badge]: https://docs.rs/cargo-ux/badge.svg
+[docrs-badge]: https://img.shields.io/docsrs/cargo-ux?style=flat-square
 [docrs-url]: https://docs.rs/cargo-ux/
-[crates-badge]: https://img.shields.io/crates/v/cargo-ux.svg
+[crates-badge]: https://img.shields.io/crates/v/cargo-ux.svg?style=flat-square
 [crates-url]: https://crates.io/crates/cargo-ux
-[license-badge]: https://img.shields.io/badge/license-GPL--3.0-green.svg
+[license-badge]: https://img.shields.io/badge/license-GPL--3.0-green.svg?style=flat-square
 [license-url]: https://github.com/angular-rust/cargo-ux/blob/master/LICENSE
-[gitter-badge]: https://img.shields.io/gitter/room/angular_rust/angular_rust.svg
+[gitter-badge]: https://img.shields.io/gitter/room/angular_rust/angular_rust.svg?style=flat-square
 [gitter-url]: https://gitter.im/angular_rust/angular_rust
-[rust-badge]: https://img.shields.io/badge/rustc-1.45-lightgrey.svg
+[rust-badge]: https://img.shields.io/badge/rustc-1.45-lightgrey.svg?style=flat-square
 [rust-url]: https://blog.rust-lang.org/2020/07/16/Rust-1.45.0.html
 
 Angular Rust is a high productivity, frontend web framework for the [Rust language](https://www.rust-lang.org/).
