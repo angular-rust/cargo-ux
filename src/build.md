@@ -52,8 +52,7 @@ Option | Description | Value Type | Default Value
 --named-chunks | Use file name for lazy loaded chunks. | boolean | true
 --optimization | Enables optimization of the build output. Including minification of scripts and styles, tree-shaking, dead-code elimination, inlining of critical CSS and fonts inlining. For more information, see https://angular-rust.github.io/guide/workspace-config#optimization-configuration. | boolean | false
 --output-hashing | Define the output filename cache-busting hashing mode. |	none\|all\|media\|bundles |	none
---output-path | The full path for the new output directory, relative to the current workspace. 
-By default, writes output to a folder named dist/ in the current project. | string |
+--output-path | The full path for the new output directory, relative to the current workspace. By default, writes output to a folder named dist/ in the current project. | string |
 --poll | Enable and define the file watching poll time period in milliseconds. | number |
 --polyfills | The full path for the polyfills file, relative to the current workspace. | string 	|
 --preserve-symlinks | Do not use the real path when resolving modules. If unset then will default to true if NodeJS option --preserve-symlinks is set. | boolean |
