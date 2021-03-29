@@ -38,8 +38,7 @@ Option | Description | Value Type | Default Value
 --build-optimizer | Enables '@angular-devkit/build-optimizer' optimizations when using the 'aot' option. | boolean | false
 --common-chunk | Generate a seperate bundle containing code used across multiple bundles. |	boolean | true
 --configuration |One or more named builder configurations as a comma-separated list as specified in the "configurations" section of ux.yaml. The builder uses the named configurations to run the given target. For more information, see https://angular-rust.github.io/guide/workspace-config#alternate-build-configurations. Setting this explicitly overrides the "--prod" flag. Aliases: -c |	string |
---cross-origin | Define the crossorigin attribute setting of elements that provide CORS support.
-| none\|anonymous\|use-credentials | none
+--cross-origin | Define the crossorigin attribute setting of elements that provide CORS support. | none\|anonymous\|use-credentials | none
 --delete-output-path | Delete the output path before building. | boolean | true
 --deploy-url | URL where files will be deployed. | string |
 --experimental-rollup-pass | Concatenate modules with Rollup before bundling them with Webpack. | boolean | false
