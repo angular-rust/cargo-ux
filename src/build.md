@@ -56,7 +56,7 @@ Option | Description | Value Type | Default Value
 --poll | Enable and define the file watching poll time period in milliseconds. | number |
 --polyfills | The full path for the polyfills file, relative to the current workspace. | string 	|
 --preserve-symlinks | Do not use the real path when resolving modules. If unset then will default to true if NodeJS option --preserve-symlinks is set. | boolean |
---prod | Shorthand for "--configuration=production". Set the build configuration to the production target. By default, the production target is set up in the workspace configuration such that all builds make use of bundling, limited tree-shaking, and also limited dead code elimination. | boolean |
+--prod | Shorthand for "--configuration=production". Set the build configuration to the production target. By default, the production target is set up in the workspace configuration such that all builds make use of bundling, limited tree-shaking, and also limited dead code elimination. | boolean
 --progress | Log progress to the console while building. | boolean | true
 --resources-output-path | The path where style resources will be placed, relative to outputPath.| string |
 --service-worker | Generates a service worker config for production builds. | boolean |	false
