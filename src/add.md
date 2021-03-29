@@ -30,5 +30,5 @@ Option          | Description               | Value Type | Default Value
 --defaults      | Disable interactive input prompts for options with a default.| boolean |	
 --help 	        | Shows a help message for this command in the console. | true\|false\|json | false
 --interactive 	| Enable interactive input prompts. | boolean |
---registry 	    | The NPM registry to use. | string | 
+--registry 	    | The registry to use. | string | 
 --verbose 	    | Display additional details about internal operations during execution. | boolean |false
