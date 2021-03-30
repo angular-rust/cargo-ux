@@ -190,6 +190,7 @@ name     | The name of the enum. | string
 #### Options
 
 Option      | Description |	Value Type | Default Value
+------------|-------------|------------|--------------
 --project 	| The name of the project in which to create the enum. Default is the configured default project for the workspace. | string 	
 
 ### guard
@@ -230,6 +231,7 @@ Creates a new, generic interceptor definition in the given or default project.
 
 #### Arguments
 Argument | Description | Value Type
+---------|-------------|-------------
 name     | The name of the interceptor. | string
 
 #### Options
@@ -362,6 +364,7 @@ name     | The name of the new resolver. | string
 
 #### Options
 Option      | Description |	Value Type | Default Value
+------------|-------------|------------|----------------
 --flat 	    | When true (the default), creates the new files at the top level of the current project. | boolean | true
 --project 	| The name of the project. | string 	
 --skip-tests| Do not create "spec.rs" test files for the new resolver. | boolean | false
@@ -423,6 +426,7 @@ Creates a new generic web worker definition in the given or default project.
 #### Arguments
 
 Argument | Description | Value Type
+---------|-------------|--------------
 name     | The name of the worker. | string
 
 #### Options

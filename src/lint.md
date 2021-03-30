@@ -33,5 +33,4 @@ Option          | Description | Value Type | Default Value
 --format 	    | Output format (prose, json, stylish, verbose, pmd, msbuild, checkstyle, vso, fileslist). | string | stylish
 --help 	        | Shows a help message for this command in the console. | true\|false\|json | false
 --silent 	    | Show output text. | boolean |	false
---tslint-config | The name of the TSLint configuration file. | string 	
 --type-check 	| Controls the type check for linting. | boolean | false

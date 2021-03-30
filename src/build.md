@@ -41,7 +41,6 @@ Option | Description | Value Type | Default Value
 --cross-origin | Define the crossorigin attribute setting of elements that provide CORS support. | none\|anonymous\|use-credentials | none
 --delete-output-path | Delete the output path before building. | boolean | true
 --deploy-url | URL where files will be deployed. | string |
---experimental-rollup-pass | Concatenate modules with Rollup before bundling them with Webpack. | boolean | false
 --extract-licenses | Extract all licenses in a separate file. |	boolean | false
 --fork-type-checker | Run the type checker in a forked process. | boolean | true
 --help | Shows a help message for this command in the console. | true\|false\|json | false

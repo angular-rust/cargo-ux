@@ -30,13 +30,12 @@ Option 	            | Description | Value Type | Default Value
 --open 	            | Opens the url in default browser. **Aliases:** -o | boolean |	false
 --poll 	            | Enable and define the file watching poll time period in milliseconds. | 	number 	
 --port 	            | Port to listen on. | number |	4200
---prod 	            | Shorthand for "--configuration=production". Set the build configuration to the production target. By default, the production target is set up in the workspace configuration such that all builds make use of bundling, limited tree-shaking, and also limited dead code elimination. | boolean 	
+--prod 	            | Shorthand for "--configuration=production". Set the build configuration to the production target. By default, the production target is set up in the workspace configuration such that all builds make use of bundling, limited tree-shaking, and also limited dead code elimination. | boolean
 --proxy-config 	    | Proxy configuration file. | string 	
 --public-host 	    | The URL that the browser client (or live-reload client, if enabled) should use to connect to the development server. Use for a complex dev server setup, such as one with reverse proxies. | string 	
 --serve-path 	    | The pathname where the app will be served. | string 	
 --ssl 	            | Serve using HTTPS. | boolean | false
 --ssl-cert 	        | SSL certificate to use for serving HTTPS. | string 	
---ssl-key 	        | SSL key to use for serving HTTPS. | string 	
-only used for development. | boolean 	
+--ssl-key 	        | SSL key to use for serving HTTPS. | string 
 --verbose 	        | Adds more details to output logging. | boolean 	
 --watch 	        | Rebuild on change. | boolean | true
