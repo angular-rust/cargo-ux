@@ -302,8 +302,9 @@
 <tr><td>name</td><td>The name of the enum.</td><td>string</td></tr>
 </tbody></table>
 <h4><a class="header" href="#options-6" id="options-6">Options</a></h4>
-<p>Option      | Description |	Value Type | Default Value
---project 	| The name of the project in which to create the enum. Default is the configured default project for the workspace. | string</p>
+<table><thead><tr><th>Option</th><th>Description</th><th>Value Type</th><th>Default Value</th></tr></thead><tbody>
+<tr><td>--project</td><td>The name of the project in which to create the enum. Default is the configured default project for the workspace.</td><td>string</td><td></td></tr>
+</tbody></table>
 <h3><a class="header" href="#guard" id="guard">guard</a></h3>
 <pre><code>cargo ux generate guard &lt;name&gt; [options]
 </code></pre>
@@ -328,8 +329,9 @@
 </code></pre>
 <p>Creates a new, generic interceptor definition in the given or default project.</p>
 <h4><a class="header" href="#arguments-7" id="arguments-7">Arguments</a></h4>
-<p>Argument | Description | Value Type
-name     | The name of the interceptor. | string</p>
+<table><thead><tr><th>Argument</th><th>Description</th><th>Value Type</th></tr></thead><tbody>
+<tr><td>name</td><td>The name of the interceptor.</td><td>string</td></tr>
+</tbody></table>
 <h4><a class="header" href="#options-8" id="options-8">Options</a></h4>
 <table><thead><tr><th>Option</th><th>Description</th><th>Value Type</th><th>Default Value</th></tr></thead><tbody>
 <tr><td>--flat</td><td>When true (the default), creates files at the top level of the project.</td><td>boolean</td><td>true</td></tr>
@@ -418,10 +420,11 @@ name     | The name of the interceptor. | string</p>
 <tr><td>name</td><td>The name of the new resolver.</td><td>string</td></tr>
 </tbody></table>
 <h4><a class="header" href="#options-13" id="options-13">Options</a></h4>
-<p>Option      | Description |	Value Type | Default Value
---flat 	    | When true (the default), creates the new files at the top level of the current project. | boolean | true
---project 	| The name of the project. | string<br />
---skip-tests| Do not create &quot;spec.rs&quot; test files for the new resolver. | boolean | false</p>
+<table><thead><tr><th>Option</th><th>Description</th><th>Value Type</th><th>Default Value</th></tr></thead><tbody>
+<tr><td>--flat</td><td>When true (the default), creates the new files at the top level of the current project.</td><td>boolean</td><td>true</td></tr>
+<tr><td>--project</td><td>The name of the project.</td><td>string</td><td></td></tr>
+<tr><td>--skip-tests</td><td>Do not create &quot;spec.rs&quot; test files for the new resolver.</td><td>boolean</td><td>false</td></tr>
+</tbody></table>
 <h3><a class="header" href="#service" id="service">service</a></h3>
 <pre><code>cargo ux generate service &lt;name&gt; [options]
 </code></pre>
@@ -457,8 +460,9 @@ name     | The name of the interceptor. | string</p>
 </code></pre>
 <p>Creates a new generic web worker definition in the given or default project.</p>
 <h4><a class="header" href="#arguments-14" id="arguments-14">Arguments</a></h4>
-<p>Argument | Description | Value Type
-name     | The name of the worker. | string</p>
+<table><thead><tr><th>Argument</th><th>Description</th><th>Value Type</th></tr></thead><tbody>
+<tr><td>name</td><td>The name of the worker.</td><td>string</td></tr>
+</tbody></table>
 <h4><a class="header" href="#options-16" id="options-16">Options</a></h4>
 <table><thead><tr><th>Option</th><th>Description</th><th>Value Type</th><th>Default Value</th></tr></thead><tbody>
 <tr><td>--project</td><td>The name of the project.</td><td>string</td><td></td></tr>

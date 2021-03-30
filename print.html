@@ -347,7 +347,6 @@ See the complete schema for ux.yaml.
 <tr><td>--cross-origin</td><td>Define the crossorigin attribute setting of elements that provide CORS support.</td><td>none|anonymous|use-credentials</td><td>none</td></tr>
 <tr><td>--delete-output-path</td><td>Delete the output path before building.</td><td>boolean</td><td>true</td></tr>
 <tr><td>--deploy-url</td><td>URL where files will be deployed.</td><td>string</td><td></td></tr>
-<tr><td>--experimental-rollup-pass</td><td>Concatenate modules with Rollup before bundling them with Webpack.</td><td>boolean</td><td>false</td></tr>
 <tr><td>--extract-licenses</td><td>Extract all licenses in a separate file.</td><td>boolean</td><td>false</td></tr>
 <tr><td>--fork-type-checker</td><td>Run the type checker in a forked process.</td><td>boolean</td><td>true</td></tr>
 <tr><td>--help</td><td>Shows a help message for this command in the console.</td><td>true|false|json</td><td>false</td></tr>
@@ -639,8 +638,9 @@ See the complete schema for ux.yaml.
 <tr><td>name</td><td>The name of the enum.</td><td>string</td></tr>
 </tbody></table>
 <h4><a class="header" href="#options-14" id="options-14">Options</a></h4>
-<p>Option      | Description |	Value Type | Default Value
---project 	| The name of the project in which to create the enum. Default is the configured default project for the workspace. | string</p>
+<table><thead><tr><th>Option</th><th>Description</th><th>Value Type</th><th>Default Value</th></tr></thead><tbody>
+<tr><td>--project</td><td>The name of the project in which to create the enum. Default is the configured default project for the workspace.</td><td>string</td><td></td></tr>
+</tbody></table>
 <h3><a class="header" href="#guard" id="guard">guard</a></h3>
 <pre><code>cargo ux generate guard &lt;name&gt; [options]
 </code></pre>
@@ -665,8 +665,9 @@ See the complete schema for ux.yaml.
 </code></pre>
 <p>Creates a new, generic interceptor definition in the given or default project.</p>
 <h4><a class="header" href="#arguments-15" id="arguments-15">Arguments</a></h4>
-<p>Argument | Description | Value Type
-name     | The name of the interceptor. | string</p>
+<table><thead><tr><th>Argument</th><th>Description</th><th>Value Type</th></tr></thead><tbody>
+<tr><td>name</td><td>The name of the interceptor.</td><td>string</td></tr>
+</tbody></table>
 <h4><a class="header" href="#options-16" id="options-16">Options</a></h4>
 <table><thead><tr><th>Option</th><th>Description</th><th>Value Type</th><th>Default Value</th></tr></thead><tbody>
 <tr><td>--flat</td><td>When true (the default), creates files at the top level of the project.</td><td>boolean</td><td>true</td></tr>
@@ -755,10 +756,11 @@ name     | The name of the interceptor. | string</p>
 <tr><td>name</td><td>The name of the new resolver.</td><td>string</td></tr>
 </tbody></table>
 <h4><a class="header" href="#options-21" id="options-21">Options</a></h4>
-<p>Option      | Description |	Value Type | Default Value
---flat 	    | When true (the default), creates the new files at the top level of the current project. | boolean | true
---project 	| The name of the project. | string<br />
---skip-tests| Do not create &quot;spec.rs&quot; test files for the new resolver. | boolean | false</p>
+<table><thead><tr><th>Option</th><th>Description</th><th>Value Type</th><th>Default Value</th></tr></thead><tbody>
+<tr><td>--flat</td><td>When true (the default), creates the new files at the top level of the current project.</td><td>boolean</td><td>true</td></tr>
+<tr><td>--project</td><td>The name of the project.</td><td>string</td><td></td></tr>
+<tr><td>--skip-tests</td><td>Do not create &quot;spec.rs&quot; test files for the new resolver.</td><td>boolean</td><td>false</td></tr>
+</tbody></table>
 <h3><a class="header" href="#service" id="service">service</a></h3>
 <pre><code>cargo ux generate service &lt;name&gt; [options]
 </code></pre>
@@ -794,8 +796,9 @@ name     | The name of the interceptor. | string</p>
 </code></pre>
 <p>Creates a new generic web worker definition in the given or default project.</p>
 <h4><a class="header" href="#arguments-22" id="arguments-22">Arguments</a></h4>
-<p>Argument | Description | Value Type
-name     | The name of the worker. | string</p>
+<table><thead><tr><th>Argument</th><th>Description</th><th>Value Type</th></tr></thead><tbody>
+<tr><td>name</td><td>The name of the worker.</td><td>string</td></tr>
+</tbody></table>
 <h4><a class="header" href="#options-24" id="options-24">Options</a></h4>
 <table><thead><tr><th>Option</th><th>Description</th><th>Value Type</th><th>Default Value</th></tr></thead><tbody>
 <tr><td>--project</td><td>The name of the project.</td><td>string</td><td></td></tr>
@@ -843,7 +846,6 @@ name     | The name of the worker. | string</p>
 <tr><td>--format</td><td>Output format (prose, json, stylish, verbose, pmd, msbuild, checkstyle, vso, fileslist).</td><td>string</td><td>stylish</td></tr>
 <tr><td>--help</td><td>Shows a help message for this command in the console.</td><td>true|false|json</td><td>false</td></tr>
 <tr><td>--silent</td><td>Show output text.</td><td>boolean</td><td>false</td></tr>
-<tr><td>--tslint-config</td><td>The name of the TSLint configuration file.</td><td>string</td><td></td></tr>
 <tr><td>--type-check</td><td>Controls the type check for linting.</td><td>boolean</td><td>false</td></tr>
 </tbody></table>
 <h1><a class="header" href="#cargo-ux-new" id="cargo-ux-new">cargo ux new</a></h1>
@@ -956,7 +958,6 @@ name     | The name of the new workspace and initial project. | string</p>
 <tr><td>--ssl</td><td>Serve using HTTPS.</td><td>boolean</td><td>false</td></tr>
 <tr><td>--ssl-cert</td><td>SSL certificate to use for serving HTTPS.</td><td>string</td><td></td></tr>
 <tr><td>--ssl-key</td><td>SSL key to use for serving HTTPS.</td><td>string</td><td></td></tr>
-<tr><td>only used for development.</td><td>boolean</td><td></td><td></td></tr>
 <tr><td>--verbose</td><td>Adds more details to output logging.</td><td>boolean</td><td></td></tr>
 <tr><td>--watch</td><td>Rebuild on change.</td><td>boolean</td><td>true</td></tr>
 </tbody></table>
