@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea to Plotter maintainers
+about: Suggest an idea to Cargo UX maintainers
 title: "[Feature Request]"
 labels: feature request
 assignees: ''
