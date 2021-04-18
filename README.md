@@ -28,7 +28,9 @@
 [loc-url]: https://github.com/angular-rust/cargo-ux
 
 
-cargo-ux is a Centralized State Management And Design Patterns for Rust.
+**Cargo UX** improves the development process by speeding up component creation, declarative development, hot module reloading, and fast sketching with Generative Art & Creative Coding.
+
+> **work in progress**
 
 **Angular Rust** is a high productivity, `platform-agnostic` frontend framework for the [Rust language](https://www.rust-lang.org/). It now supports desktop and web development. Angular Rust currently uses GTK for desktop development and WebAssembly for web development. We are planning to add support for mobile development.
 
