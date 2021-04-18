@@ -33,30 +33,29 @@ fn add<'a, 'b>() -> App<'a, 'b> {
         .arg(
             Arg::with_name("collection")
                 .required(true)
-                .help("The package to be added [string]")
-                
+                .help("The package to be added [string]"),
         )
         .arg(
             Arg::with_name("defaults")
                 .long("defaults")
-                .help("Disable interactive input prompts for options with a default")
+                .help("Disable interactive input prompts for options with a default"),
         )
         .arg(
             Arg::with_name("interactive")
                 .long("interactive")
-                .help("Enable interactive input prompts")
+                .help("Enable interactive input prompts"),
         )
         .arg(
             Arg::with_name("registry")
                 .long("registry")
                 .help("The registry to use")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("verbose")
                 .long("verbose")
                 .short("v")
-                .help("Display additional details about internal operations during execution")
+                .help("Display additional details about internal operations during execution"),
         )
 }
 
@@ -66,12 +65,9 @@ fn analytics<'a, 'b>() -> App<'a, 'b> {
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
         .arg(
             Arg::with_name("setting-or-project")
-                .help("Directly enables or disables all usage analytics for the user")
+                .help("Directly enables or disables all usage analytics for the user"),
         )
-        .arg(
-            Arg::with_name("project-setting")
-                .help("Sets the default analytics enablement status")
-        )
+        .arg(Arg::with_name("project-setting").help("Sets the default analytics enablement status"))
 }
 
 fn build<'a, 'b>() -> App<'a, 'b> {
@@ -283,16 +279,16 @@ fn config<'a, 'b>() -> App<'a, 'b> {
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
         .arg(
             Arg::with_name("json-path")
-                .help("The configuration key to set or query, in JSON path format")
+                .help("The configuration key to set or query, in JSON path format"),
         )
         .arg(
             Arg::with_name("value")
-                .help("If provided, a new value for the given configuration key")
+                .help("If provided, a new value for the given configuration key"),
         )
         .arg(
             Arg::with_name("global")
                 .long("global")
-                .help("Access the global configuration in the caller's home directory")
+                .help("Access the global configuration in the caller's home directory"),
         )
 }
 
@@ -503,25 +499,25 @@ fn generate<'a, 'b>() -> App<'a, 'b> {
             Arg::with_name("defaults")
                 .long("defaults")
                 .help("Disable interactive input prompts for options with a default")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("dry-run")
                 .long("dry-run")
                 .help("Run through and reports activity without writing out results")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("force")
                 .long("force")
                 .help("Force overwriting of existing files")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("interactive")
                 .long("interactive")
                 .help("Enable interactive input prompts")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -537,43 +533,43 @@ fn generate_appshell<'a, 'b>() -> App<'a, 'b> {
             Arg::with_name("app-dir")
                 .long("app-dir")
                 .help("The name of the application directory")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("app-id")
                 .long("app-id")
                 .help("The app ID to use in withServerTransition()")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("client-project")
                 .long("client-project")
                 .help("The name of the related client app")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("main")
                 .long("main")
                 .help("The name of the main entry-point file")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("root-module-class-name")
                 .long("root-module-class-name")
                 .help("The name of the root module class")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("root-module-file-name")
                 .long("root-module-file-name")
                 .help("The name of the root module file")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("route")
                 .long("route")
                 .help("Route path used to produce the app shell")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -657,27 +653,24 @@ fn generate_class<'a, 'b>() -> App<'a, 'b> {
     App::new("class")
         .about("Creates a new generic class definition in the given or default project")
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
-        .arg(
-            Arg::with_name("name")
-                .help("The name of the new class")
-        )
+        .arg(Arg::with_name("name").help("The name of the new class"))
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("skip-tests")
                 .long("skip-tests")
                 .help("Do not create 'spec.rs' test files for the new class")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("type")
                 .long("type")
                 .help("Adds a developer-defined type to the filename, in the format 'name.type.rs'")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -685,105 +678,102 @@ fn generate_component<'a, 'b>() -> App<'a, 'b> {
     App::new("component")
         .about("Creates a new generic component definition in the given or default project")
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
-        .arg(
-            Arg::with_name("name")
-                .help("The name of the component")
-        )
+        .arg(Arg::with_name("name").help("The name of the component"))
         .arg(
             Arg::with_name("change-detection")
                 .long("change-detection")
                 .help("The change detection strategy to use in the new component")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("display-block")
                 .long("display-block")
                 .help("Specifies if the style will contain :host { display: block; }")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("export")
                 .long("export")
                 .help("The declaring module exports this component")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("flat")
                 .long("flat")
                 .help("Create the new files at the top level of the current project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("inline-style")
                 .long("inline-style")
                 .help("Include styles inline in the component.rs file")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("inline-template")
                 .long("inline-template")
                 .help("Include template inline in the component.rs file")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("module")
                 .long("module")
                 .help("The declaring module")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("prefix")
                 .long("prefix")
                 .help("The prefix to apply to the generated component selector")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("collection")
                 .long("collection")
                 .help("Abrowserbuildertargettoextract")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("selector")
                 .long("selector")
                 .help("The HTML selector to use for this component")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("skip-import")
                 .long("skip-import")
                 .help("Do not import this component into the owning module")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("skip-selector")
                 .long("skip-selector")
                 .help("Specifies if the component should have a selector or not")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("skip-tests")
                 .long("skip-tests")
                 .help("Do not create 'spec.rs' test files for the new component")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("type")
                 .long("type")
                 .help("Adds a developer-defined type to the filename, in the format 'name.type.rs'")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("view-encapsulation")
                 .long("view-encapsulation")
                 .help("The view encapsulation strategy to use in the new component")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -849,15 +839,12 @@ fn generate_enum<'a, 'b>() -> App<'a, 'b> {
     App::new("enum")
         .about("Generates a new, generic enum definition for the given or default project")
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
-        .arg(
-            Arg::with_name("name")
-                .help("The name of the enum")
-        )
+        .arg(Arg::with_name("name").help("The name of the enum"))
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project in which to create the enum")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -899,27 +886,24 @@ fn generate_interceptor<'a, 'b>() -> App<'a, 'b> {
     App::new("interceptor")
         .about("Creates a new, generic interceptor definition in the given or default project")
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
-        .arg(
-            Arg::with_name("name")
-                .help("The name of the interceptor")
-        )
+        .arg(Arg::with_name("name").help("The name of the interceptor"))
         .arg(
             Arg::with_name("flat")
                 .long("flat")
                 .help("When true (the default), creates files at the top level of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("skip-tests")
                 .long("skip-tests")
                 .help("Do not create 'spec.rs' test files for the new interceptor")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -927,25 +911,23 @@ fn generate_interface<'a, 'b>() -> App<'a, 'b> {
     App::new("interface")
         .about("Creates a new generic interface definition in the given or default project")
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
+        .arg(Arg::with_name("name").help("The name of the interface"))
         .arg(
-            Arg::with_name("name")
-                .help("The name of the interface")
-        )
-        .arg(
-            Arg::with_name("type")
-                .help("Adds a developer-defined type to the filename, in the format 'name.type.rs'")
+            Arg::with_name("type").help(
+                "Adds a developer-defined type to the filename, in the format 'name.type.rs'",
+            ),
         )
         .arg(
             Arg::with_name("prefix")
                 .long("prefix")
                 .help("A prefix to apply to generated selectors")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -987,45 +969,42 @@ fn generate_module<'a, 'b>() -> App<'a, 'b> {
     App::new("module")
         .about("Creates a new generic module definition in the given or default project")
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
-        .arg(
-            Arg::with_name("name")
-                .help("The name of the module")
-        )
+        .arg(Arg::with_name("name").help("The name of the module"))
         .arg(
             Arg::with_name("flat")
                 .long("flat")
                 .help("Create the new files at the top level of the current project root")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("module")
                 .long("module")
                 .help("The declaring module")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("route")
                 .long("route")
                 .help("The route path for a lazy-loaded module")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("routing")
                 .long("routing")
                 .help("Create a routing module")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("routing-scope")
                 .long("routing-scope")
                 .help("The scope for the new routing module")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -1033,45 +1012,42 @@ fn generate_pipe<'a, 'b>() -> App<'a, 'b> {
     App::new("pipe")
         .about("Creates a new generic pipe definition in the given or default project")
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
-        .arg(
-            Arg::with_name("name")
-                .help("The name of the pipe")
-        )
+        .arg(Arg::with_name("name").help("The name of the pipe"))
         .arg(
             Arg::with_name("export")
                 .long("export")
                 .help("The declaring module exports this pipe")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("flat")
                 .long("flat")
                 .help("When true (the default) creates files at the top level of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("module")
                 .long("module")
                 .help("The declaring module")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("skip-import")
                 .long("skip-import")
                 .help("Do not import this pipe into the owning module")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("skip-tests")
                 .long("skip-tests")
                 .help("Do not create 'spec.rs' test files for the new pipe")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -1107,27 +1083,24 @@ fn generate_service<'a, 'b>() -> App<'a, 'b> {
     App::new("service")
         .about("Creates a new, generic service definition in the given or default project")
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
-        .arg(
-            Arg::with_name("name")
-                .help("The name of the service")
-        )
+        .arg(Arg::with_name("name").help("The name of the service"))
         .arg(
             Arg::with_name("flat")
                 .long("flat")
                 .help("When true (the default), creates files at the top level of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("skip-tests")
                 .long("skip-tests")
                 .help("Do not create 'spec.rs' test files for the new service")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -1143,19 +1116,19 @@ fn generate_serviceworker<'a, 'b>() -> App<'a, 'b> {
             Arg::with_name("configuration")
                 .long("configuration")
                 .help("The configuration to apply service worker to")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("target")
                 .long("target")
                 .help("The target to apply service worker to")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -1163,27 +1136,24 @@ fn generate_webworker<'a, 'b>() -> App<'a, 'b> {
     App::new("webworker")
         .about("Creates a new generic web worker definition in the given or default project")
         .setting(AppSettings::ArgRequiredElseHelp) // They can even have different settings
-        .arg(
-            Arg::with_name("name")
-                .help("The name of the worker")
-        )
+        .arg(Arg::with_name("name").help("The name of the worker"))
         .arg(
             Arg::with_name("project")
                 .long("project")
                 .help("The name of the project")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("snippet")
                 .long("snippet")
                 .help("Add a worker creation snippet in a sibling file of the same name")
-                .takes_value(true)
+                .takes_value(true),
         )
         .arg(
             Arg::with_name("target")
                 .long("target")
                 .help("The target to apply web worker to")
-                .takes_value(true)
+                .takes_value(true),
         )
 }
 
@@ -1272,7 +1242,7 @@ fn new<'a, 'b>() -> App<'a, 'b> {
                 .long("defaults")
                 .help("Disable interactive input prompts for options with a default")
                 .takes_value(true)
-        )        
+        )
         .arg(
             Arg::with_name("directory")
                 .long("directory")
